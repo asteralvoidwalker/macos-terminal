@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>macOS Terminal</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/terminal.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <section class="terminal-window" id="terminalWindow">
+
+            <!-- TITLE BAR -->
+            <header class="title-bar">
+
+                <div class="window-controls">
+
+                    <button class="window-button close"
+                        id="closeButton"></button>
+
+                    <button class="window-button minimize"
+                        id="minimizeButton"></button>
+
+                    <button class="window-button maximize"
+                        id="maximizeButton"></button>
+
+                </div>
+
+                <div class="window-title">
+
+                    <img
+                        src="svg/terminal.svg"
+                        alt=""
+                    >
+
+                    <span>Terminal</span>
+
+                </div>
+
+            </header>
+
+
+            <!-- TERMINAL -->
+            <div
+                class="terminal"
+                id="terminal"
+                tabindex="0"
+            >
+
+                <!-- OUTPUT -->
+
+                <div
+                    class="terminal-output"
+                    id="terminalOutput"
+                >
+
+                    <div>
+                        Last login: Sun Aug 30 14:28:00 on ttys001
+                    </div>
+
+                    <div>&nbsp;</div>
+
+                </div>
+
+
+                <!-- INPUT -->
+
+                <div
+                    class="terminal-input-line"
+                    id="terminalInputLine"
+                >
+
+                    <span
+                        class="prompt"
+                        id="prompt"
+                    >Dagi-Mac:~ dagi$</span>
+
+                    <input
+                        id="commandInput"
+                        class="command-input"
+                        type="text"
+                        autocomplete="off"
+                        autocorrect="off"
+                        autocapitalize="off"
+                        spellcheck="false"
+                        aria-label="Terminal command"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/filesystem.js"></script>
+    <script src="js/commands.js"></script>
+    <script src="js/autocomplete.js"></script>
+    <script src="js/terminal.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
